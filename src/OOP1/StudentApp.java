@@ -6,20 +6,19 @@ package OOP1;
 public class StudentApp {
     public static void main(String[] args){
 
-        int [] marks = new int[10];
-        Student student = new Student(5, "Ivanov", marks);
 
-        Student studentCopy = new Student(student);
+        Student student1 = new Student(1, "Ivanov");
+        Student student2 = new Student(2, "Petrov");
 
-        System.out.println(student.id);
-        System.out.println(student.surname);
-        System.out.println(student.marks);
+        student1.setMark(2,5);
+        student2.setMark(6, 4);
 
-        System.out.println();
-        
-        System.out.println(studentCopy.id);
-        System.out.println(studentCopy.surname);
-        System.out.println(studentCopy.marks);
+        System.out.println(student1.getMark(2));
 
+        Group group = new Group();
+        group.addStudent(student1);
+        group.addStudent(student2);
+        group.addStudent("Sidorov");
+        group.print();
     }
 }

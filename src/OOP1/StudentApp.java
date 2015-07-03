@@ -6,16 +6,20 @@ package OOP1;
 public class StudentApp {
     public static void main(String[] args){
 
-        Student student = new Student();
+        int [] marks = new int[10];
+        Student student = new Student(5, "Ivanov", marks);
+
+        Student studentCopy = new Student(student);
 
         System.out.println(student.id);
-        student.id = 1;
-        System.out.println(student.id);
+        System.out.println(student.surname);
+        System.out.println(student.marks);
 
-        Student student2 = new Student();
-        student2.id=100;
+        System.out.println();
+        
+        System.out.println(studentCopy.id);
+        System.out.println(studentCopy.surname);
+        System.out.println(studentCopy.marks);
 
-        student.come();
-        student2.come();
     }
 }

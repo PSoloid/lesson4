@@ -8,11 +8,28 @@ public class Student {
     public String surname =null;
     public int[] marks;
 
-    public void come(){
-        System.out.println("Student #" + id + " come");
-        }
+    public Student(){
+        id=0;
+        surname = "N/A";
+        marks = new int[34];
+    }
+    public Student(int i, String s, int[] m){
+        id=i;
+        surname = s;
+        marks = m;
+    }
+    public Student(int id, String surname){
+        this.id = id;
+        this.surname = surname;
+        marks = new int[34];
+    }
 
-    public void leave(){
-        System.out.println("Good bye!!");
+    public Student (Student st){
+        this.id = st.id;
+        surname = new String(st.surname);
+        marks = new int[st.marks.length];
+        for(int i=0; i<marks.length; i++){
+            marks[i] = st.marks[i];
+        }
     }
 }

@@ -19,10 +19,14 @@ public class Student {
         surname = s;
         marks = m;
     }
+    public Student(int i, String s, int numOfMarks){
+        id=i;
+        surname = s;
+        marks = new int[numOfMarks];
+    }
+
     public Student(int id, String surname){
-        this.id = id;
-        this.surname = surname;
-        marks = new int[34];
+        this(id,surname,34);
     }
 
     public Student (Student st){
